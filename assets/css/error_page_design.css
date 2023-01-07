@@ -1,0 +1,9 @@
+body{
+    background: linear-gradient(to right , black , blue);
+    text-align: center;
+}
+
+h1{
+    color: whitesmoke;
+    font-family: sans-serif;
+}

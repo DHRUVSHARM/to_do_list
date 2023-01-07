@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+    
+
+<script src="https://kit.fontawesome.com/68ae2c3b16.js" crossorigin="anonymous"></script>
+
+     <link rel="stylesheet" type="text/css" href="/css/home.css" >
+
+    </head>
+    <body>
+        
+        <div id="app">
+
+        <h1>
+            <i class="fas fa-clipboard-list" id="logo"></i>
+            TO DO APP
+        </h1>
+
+
+        <div id="inputs">
+
+            <form action="/create-event" method="POST">
+
+                <h3>DESCRIPTION</h3>
+                <textarea type="text" name="description" rows="2" cols="50" placeholder="What do you want to do?" required></textarea>
+                <br>
+                <span id="category_style">
+                <h3>CATEGORY</h3>
+                <select id="category_dropdown" name="category" required>
+                    <option value="personal">PERSONAL</option>
+                    <option value="work">WORK</option>
+                    <option value="school">SCHOOL </option>
+                    <option value="other">OTHER</option>
+                  </select>
+                  </span>
+                  <span id="due_date_style">
+                  <h3>DUE DATE</h3>
+                  <input type="date" id="date_style" name="due_date" required>
+                  </span>
+
+                  <br><br>
+
+                <!--<input type="text" name="my_name" placeholder="ENTER NAME" required>
+                <input type="number" name="phone" placeholder="ENTER PHONE NO:" required>-->
+                <div id="add">
+                <button id="submit-btn" type="submit">ADD TASK</button>
+                </div>
+            </form>
+            </div>
+
+        <div id="lists">
+        <ul>
+
+        <form action="/delete-event" method="POST">
+            <div id="del">
+            <button id="delete-task-button" type="submit" required>DELETE TASK</button>
+            </div>
+            <% for(let i of event_list){ %>
+               
+                
+               
+                <li>
+                    
+                
+                    
+                    <input type="radio" id="radio_input" name="task_delete" value="<%=i._id %>">
+                   
+                    
+                   <!-- <h3><%=i.name %></h3>
+                        <h3><%=i.phone %></h3> -->
+
+                    <div id="desc"><h3 id="task">TASK:</h3><h4><%= i.description %></h4>
+                        <div id="category_tag"><h3><%= i.category %></h3></div>
+                    </div>
+                    
+                    <div id="date_display">
+                    <h4><i class="fas fa-calendar-alt" id="cal_logo"></i>
+                    <%= i.due_date %></h4>
+                    </div>
+
+                    
+
+                </li>
+
+                
+                
+            <%}%>
+
+        </form>
+            
+        </ul>
+
+        </div>
+
+
+       
+
+       </div> 
+
+    </body>
+</html>

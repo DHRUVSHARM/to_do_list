@@ -1,0 +1,155 @@
+body{
+    background: linear-gradient(to right , black 50% , chartreuse);
+    font-family: sans-serif;
+
+}
+li::marker{
+    font-size: large;
+    color: chartreuse;
+}
+li:hover {
+    
+    transform: scale(1.05);
+    /*background: linear-gradient(to left , black 50%, chartreuse);*/
+    background: black;
+    color: rgb(0, 0, 0);
+}
+li {
+    transition: all 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    width: 70vw;
+    /* padding-right: 1%; */
+    height: fit-content;
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom:1px solid chartreuse;
+}
+
+#lists {
+    display: flex;
+    justify-content: center;
+
+}
+
+/*#lists.li :hover {
+    background:darkslategray;
+}
+*/
+input{
+    padding-left: 1px;
+    font-family: sans-serif;
+    color: honeydew;
+    font-weight: 700;
+    border:2px solid whitesmoke;
+    background-color:rgba(231, 210, 210, 0.267) ;
+}
+
+#submit-btn {
+    background: #012e03;
+    border: 2px solid #080808;
+    font-weight: 600;
+    color: blanchedalmond;
+    font-family: sans-serif;
+    height: 50px;
+    width: 50%;
+}
+
+
+h1{
+    color: white;
+    font-family: sans-serif;
+}
+
+#logo {
+    /* background: chartreuse; */
+    color: chartreuse;
+    transform: scale(1.5);
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 , h5 , h4{
+    color: blanchedalmond;
+    font-family: monospace;
+}
+
+textarea{
+    width: 100%;
+    display: block;
+    font-family: monospace;
+    font-weight: 900;
+
+}
+
+#category_dropdown{
+    width: 50%;
+    font-weight: 900;
+    font-family: monospace;
+
+}
+
+#due_date_style{
+    display: inline-block;
+    width: 49%;
+}
+
+#category_style{
+    display: inline-block;
+    width: 49%;
+}
+#category_dropdown{
+    width: 100%;
+}
+#date_style{
+    width: 100%;
+}
+#cal_logo{
+    transform: scale(1.5);
+    color: whitesmoke;
+}
+
+#category_tag {
+    width: 30%;
+    background: linear-gradient(to right , #0a0a0a 49% , chartreuse);
+    height: 40px;
+    border-radius: 20%;
+    text-align: center;
+    border: 2px solid chartreuse;
+    box-shadow: chartreuse;
+}
+
+#delete-task-button{
+        background: #d80202;
+        border: 2px solid #080808;
+        font-weight: 600;
+        color: blanchedalmond;
+        font-family: sans-serif;
+        height: 50px;
+        width: 192px;
+    
+}
+
+#radio_input{
+    right: 0%;
+}
+
+#del{
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    
+}
+
+#add {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
